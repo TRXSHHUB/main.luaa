@@ -1,0 +1,53 @@
+local v1 = require(game:GetService("ReplicatedStorage"):WaitForChild("GunScripts"):WaitForChild("GunStats"))
+
+local FastEquipStats = {
+    ["Colt .45"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01},
+    ["Henry Rifle"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01},
+    ["Sawed-Off Shotgun"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01},
+    ["Double Barrel Shotgun"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01},
+    ["Schofield Revolver"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01},
+    ["Sharps Rifle"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01},
+    ["Gold Buffalo Rifle"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01},
+    ["Volcanic Pistol"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01},
+    ["Winchester Rifle"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01},
+    ["LeMat Revolver"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01},
+    ["Mauser Pistol"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01},
+    ["Bow"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01},
+    ["Pump-action Shotgun"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01},
+    ["Colt Navy"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01},
+    ["Mosin-Nagant"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01},
+    ["Gold Mosin"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01},
+    ["Bergmann No. 3"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01},
+    ["Colt 1911"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01},
+    ["Double-Action Revolver"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01},
+    ["Mondragon"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01},
+    ["Gold Mondragon"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01},
+    ["Joalland Pistol"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01},
+    ["Winchester Model 94"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01},
+    ["Colt Lightning"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01},
+    ["Remington"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01},
+    ["Gold Remington"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01},
+    ["Martini-Henry"] = {["equipTime"] = 0.01, ["ReloadSpeed"] = 0.01, ["EquipDelay"] = 0.01}
+}
+
+for name, stats in pairs(FastEquipStats) do
+    if v1[name] then for k, v in pairs(stats) do v1[name][k] = v end end
+end
+
+-- VINCULAR VARIAÇÕES
+v1["Ornate Winchester"] = v1["Winchester Rifle"]
+v1["Ornate Colt"] = v1["Colt .45"]
+v1["Gold Schofield"] = v1["Schofield Revolver"]
+v1["Engraved Double-Action"] = v1["Double-Action Revolver"]
+v1["Volcanic Model 94"] = v1["Winchester Model 94"]
+v1["Volcanic Remington"] = v1.Remington
+v1["Winter's Bounty"] = v1["Gold Buffalo Rifle"]
+v1["Dark Colt Navy"] = v1["Colt Navy"]
+v1["Dark Mosin"] = v1["Mosin-Nagant"]
+v1["Ice Winchester 94"] = v1["Winchester Model 94"]
+v1.Flintlock = v1["Joalland Pistol"]
+v1.Musket = v1["Martini-Henry"]
+v1["Ice Mosin"] = v1["Mosin-Nagant"]
+v1["Maple Bow"] = v1.Bow
+
+print("TRXSH HUB: Fast Equip Aplicado em todas as armas!")
